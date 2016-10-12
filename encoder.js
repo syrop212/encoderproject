@@ -30,36 +30,68 @@ var letters = {
   89: "y",
   90: "x"
 }
+var lett = {
+  32: " ",
+  65: "x",
+  66: "y",
+  67: "z",
+  68: "a",
+  69: "b",
+  70: "c",
+  71: "d",
+  72: "e",
+  73: "f",
+  74: "g",
+  75: "h",
+  76: "i",
+  77: "j",
+  78: "k",
+  79: "l",
+  80: "m",
+  81: "n",
+  82: "o",
+  83: "p",
+  84: "q",
+  85: "r",
+  86: "s",
+  87: "t",
+  88: "u",
+  89: "v",
+  90: "w"
+}
 
-
-//my name
+//echo
 $("#inputArea").keydown(function(e) {
     var alpha = letters[e.keyCode];
+    var beta = lett[e.keyCode];
 
-    $("#textArea").append(alpha);
-
+    //$("#textArea").append(alpha);
+    //$("#textArea").append(beta);
 
 });
+
+//Caesar cipher
+
 
 //check/uncheck
 $("input[type='radio']").click(function(e) {
   $("input:checked").prop('checked', false);
   $(this).prop('checked', true);
   if ($("input:checked").val("echo") == "echo") {
-    $("#textArea").append();
+    $("#textArea").append(alpha);
   }
 });
 $("input[type='radio']").click(function(e) {
   $("input:checked").prop('checked', false);
   $(this).prop('checked', true);
   if ($("input:checked").val("Caesar cipher") == "echo") {
-    $("#textArea").append();
+    $("#textArea").append(beta);
   }
 });
 $("input[type='radio']").click(function(e) {
   $("input:checked").prop('checked', false);
   $(this).prop('checked', true);
-  if ($("input:checked").val("Heiroglyphics") == "echo") {
+  if ($("input:checked").val("runes") == "echo") {
     $("#textArea").append();
   }
 });
