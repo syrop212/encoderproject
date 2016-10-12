@@ -1,34 +1,44 @@
+var alphabet;
+
+
+var letters = {
+  32: " ",
+  65: "a",
+  66: "b",
+  67: "c",
+  68: "d",
+  69: "e",
+  70: "f",
+  71: "g",
+  72: "h",
+  73: "i",
+  74: "j",
+  75: "k",
+  76: "l",
+  77: "m",
+  78: "n",
+  79: "o",
+  80: "p",
+  81: "q",
+  82: "r",
+  83: "s",
+  84: "t",
+  85: "u",
+  86: "v",
+  87: "w",
+  88: "x",
+  89: "y",
+  90: "x"
+}
+
+
 //my name
 $("#inputArea").keydown(function(e) {
-  if(e.keyCode == 67) {
-    $("#textArea").append("c");
-  }
-});
+    var alpha = letters[e.keyCode];
 
-$("#inputArea").keydown(function(e) {
-  if(e.keyCode == 65) {
-    $("#textArea").append("a");
-  }
-});
-$("#inputArea").keydown(function(e) {
-  if(e.keyCode == 82) {
-    $("#textArea").append("r");
-  }
-});
-$("#inputArea").keydown(function(e) {
-  if(e.keyCode == 76) {
-    $("#textArea").append("l");
-  }
-});
-$("#inputArea").keydown(function(e) {
-  if(e.keyCode == 79) {
-    $("#textArea").append("o");
-  }
-});
-$("#inputArea").keydown(function(e) {
-  if(e.keyCode == 83) {
-    $("#textArea").append("s" + " ");
-  }
+    $("#textArea").append(alpha);
+
+
 });
 
 //check/uncheck
@@ -38,10 +48,18 @@ $("input[type='radio']").click(function(e) {
   if ($("input:checked").val("echo") == "echo") {
     $("#textArea").append();
   }
-  else if ($("input:checked").val("Caesar cipher") == "echo") {
+});
+$("input[type='radio']").click(function(e) {
+  $("input:checked").prop('checked', false);
+  $(this).prop('checked', true);
+  if ($("input:checked").val("Caesar cipher") == "echo") {
     $("#textArea").append();
   }
-  else {
+});
+$("input[type='radio']").click(function(e) {
+  $("input:checked").prop('checked', false);
+  $(this).prop('checked', true);
+  if ($("input:checked").val("Heiroglyphics") == "echo") {
     $("#textArea").append();
   }
 });
