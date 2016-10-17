@@ -63,10 +63,11 @@ var lett = {
 //echo
 $("#inputArea").keydown(function(e) {
     var alpha = letters[e.keyCode];
-    var beta = lett[e.keyCode];
+    //var beta = lett[e.keyCode];
 
-    //$("#textArea").append(alpha);
-    //$("#textArea").append(beta);
+    //if($("input:checked").val()=="echo") {
+      $("#textArea").append(alpha);
+    //}
 
 });
 
@@ -77,21 +78,15 @@ $("#inputArea").keydown(function(e) {
 $("input[type='radio']").click(function(e) {
   $("input:checked").prop('checked', false);
   $(this).prop('checked', true);
-  if ($("input:checked").val("echo") == "echo") {
-    $("#textArea").append(alpha);
-  }
+  if($("input:checked").val() == "echo")
 });
+
 $("input[type='radio']").click(function(e) {
   $("input:checked").prop('checked', false);
   $(this).prop('checked', true);
-  if ($("input:checked").val("Caesar cipher") == "echo") {
-    $("#textArea").append(beta);
-  }
 });
+
 $("input[type='radio']").click(function(e) {
   $("input:checked").prop('checked', false);
   $(this).prop('checked', true);
-  if ($("input:checked").val("runes") == "echo") {
-    $("#textArea").append();
-  }
 });
