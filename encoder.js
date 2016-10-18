@@ -1,4 +1,4 @@
-var alphabet;
+
 
 
 var letters = {
@@ -30,6 +30,8 @@ var letters = {
   89: "y",
   90: "x"
 }
+
+//Caesar cipher
 var lett = {
   32: " ",
   65: "x",
@@ -63,29 +65,26 @@ var lett = {
 //echo
 $("#inputArea").keydown(function(e) {
     var alpha = letters[e.keyCode];
-    //var beta = lett[e.keyCode];
 
-    //if($("input:checked").val()=="echo") {
+    var beta = lett[e.keyCode];
+
+    if($("input:checked").val()=="echo") {
       $("#textArea").append(alpha);
-    //}
+    }
 
+    if($("input:checked").val()=="Caesarcipher") {
+      $("#textArea").append(beta);
+    }
+
+    if($("input:checked").val()=="runes") {
+      $("#textArea").append("<images/runes/" + letters[e.keyCode] + ".gif>");
+    }
 });
 
-//Caesar cipher
+
 
 
 //check/uncheck
-$("input[type='radio']").click(function(e) {
-  $("input:checked").prop('checked', false);
-  $(this).prop('checked', true);
-  if($("input:checked").val() == "echo")
-});
-
-$("input[type='radio']").click(function(e) {
-  $("input:checked").prop('checked', false);
-  $(this).prop('checked', true);
-});
-
 $("input[type='radio']").click(function(e) {
   $("input:checked").prop('checked', false);
   $(this).prop('checked', true);
