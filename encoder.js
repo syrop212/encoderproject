@@ -77,7 +77,7 @@ $("#inputArea").keydown(function(e) {
     }
 
     if($("input:checked").val()=="runes") {
-      $("#textArea").append("<images/runes/" + letters[e.keyCode] + ".gif>");
+      $("#textArea").append("<img src= images/runes/" + letters[e.keyCode] + ".gif>");
     }
 });
 
