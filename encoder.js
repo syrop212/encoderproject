@@ -62,7 +62,8 @@ var lett = {
   90: "w"
 }
 
-//echo
+
+//encoding
 $("#inputArea").keydown(function(e) {
     var alpha = letters[e.keyCode];
 
@@ -88,4 +89,18 @@ $("#inputArea").keydown(function(e) {
 $("input[type='radio']").click(function(e) {
   $("input:checked").prop('checked', false);
   $(this).prop('checked', true);
+});
+
+//decoding
+$("#translationInputText").keydown(function(e){
+  if(e.keyCode == 13) {
+    var messageToDecode = $("#translationInputText").val();
+    var messageArray = messageToDecode.split("");
+
+    for(var i = 0; i > messageArray.length; i++){
+      messageArray[i].charCodeAt(0) - 3;
+      $("#translationInputText").append(letters[e.keyCode]);
+  }
+
+  }
 });
