@@ -93,14 +93,16 @@ $("input[type='radio']").click(function(e) {
 
 //decoding
 $("#translationInputText").keydown(function(e){
+
   if(e.keyCode == 13) {
+    console.log("enter")
     var messageToDecode = $("#translationInputText").val();
     var messageArray = messageToDecode.split("");
 
-    for(var i = 0; i > messageArray.length; i++){
-      messageArray[i].charCodeAt(0) - 3;
-      $("#translationInputText").append(letters[e.keyCode]);
+    for(var i = 0; i < messageArray.length; i++){
+      console.log("in loop")
+      var translateNumber = messageArray[i].charCodeAt(0) - 32 - 3;
+      $("#translationArea").append(lett[translateNumber]);
   }
-
   }
 });
